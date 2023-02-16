@@ -15,6 +15,7 @@
 		BADBD91A299E4377003D8C86 /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD919299E4377003D8C86 /* MyImage.swift */; };
 		BADBD91C299E4425003D8C86 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = BADBD91B299E4425003D8C86 /* readme.md */; };
 		BADBD91E299E4879003D8C86 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD91D299E4879003D8C86 /* CoreDataManager.swift */; };
+		BADBD920299E4C32003D8C86 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BADBD919299E4377003D8C86 /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
 		BADBD91B299E4425003D8C86 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BADBD91D299E4879003D8C86 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				BADBD916299E42E6003D8C86 /* ImageDataModel.xcdatamodeld */,
 				BADBD919299E4377003D8C86 /* MyImage.swift */,
 				BADBD91D299E4879003D8C86 /* CoreDataManager.swift */,
+				BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				BAB537D8299E3F24002C2591 /* ContentView.swift in Sources */,
 				BADBD91E299E4879003D8C86 /* CoreDataManager.swift in Sources */,
 				BAB537D6299E3F24002C2591 /* UploadImageWithCoreDataApp.swift in Sources */,
+				BADBD920299E4C32003D8C86 /* UIImageTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

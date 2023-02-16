@@ -14,6 +14,10 @@ class CoreDataManager {
     static let shared: CoreDataManager = CoreDataManager()
     
     private init() {
+        ValueTransformer.setValueTransformer(
+            UIImageTransformer(),
+            forName: NSValueTransformerName("UIImageTransformer"))
+        
         persistentContainer = NSPersistentContainer(name: "Image")
         persistentContainer.loadPersistentStores { desc, error in
             if let error = error {
