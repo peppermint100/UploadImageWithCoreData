@@ -1,6 +1,6 @@
 # CoreData를 활용한 이미지 업로드
 ---
-- 이미지 추가 바로바로 안되는 문제 해결 => FetchReqeust를 뷰모델로 옮겨서 해결해야 할 것 같음
+- 이미지 추가 바로바로 안되는 문제 해결 => FetchReqeust를 뷰모델로 옮겨서 해결해야 할 것 같음 v
 - UI 다듬기
 - 최근 10개 사진 미리보기
 - 상세 화면 들어가서 사진 삭제하기
@@ -25,12 +25,10 @@
 
 ## CoreData에 데이터 추가
 - CoreDataManager에 데이터 추가 메소드 생성
-- context를 어디서 관리할지 Manager 파일을 어떻게 관리할지 등 구조에 대한 Best Practice가 필요할 것 같음
-
-## @FetchRequest를 통한 데이터 불러오기
-- @FetchRequest에서 SQL의 조건절을 넣을 수 있음
+- CoreData의 저장, 삭제, 수정 메소드를 각 뷰모델로 옮기는 구조가 좋다 
 
 ## Grid를 통한 이미지 나열
+
 
 ## 삽질
 - `.xcdatamodel`과 `CoreDataManager`에 사용하는 모든 엔티티 이름을 통일 해야함

@@ -37,6 +37,14 @@ class ImageGridViewModel: ObservableObject {
         save()
     }
     
+    func deleteImage(image: ImageDataModel) {
+        if let index = images.firstIndex(of: image) {
+            images.remove(at: index)
+            container.viewContext.delete(image)
+            save()
+        }
+    }
+    
     func save() {
         do {
             try container.viewContext.save()
@@ -45,5 +53,4 @@ class ImageGridViewModel: ObservableObject {
             print("CoreData 저장에 실패했습니다.")
         }
     }
-    
 }
