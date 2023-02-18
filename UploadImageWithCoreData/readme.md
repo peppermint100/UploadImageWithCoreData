@@ -19,6 +19,18 @@
 - DataModel 사이드바에 Transformer 추가
 - CoreDataManager에 DataModel과 Transformer를 연결해주는 코드 추가
 
+## CoreData에 데이터 추가
+- CoreDataManager에 데이터 추가 메소드 생성
+- context를 어디서 관리할지 Manager 파일을 어떻게 관리할지 등 구조에 대한 Best Practice가 필요할 것 같음
+
+## @FetchRequest를 통한 데이터 불러오기
+- @FetchRequest에서 SQL의 조건절을 넣을 수 있음
+
+## Grid를 통한 이미지 나열
+
+## 삽질
+- `.xcdatamodel`과 `CoreDataManager`에 사용하는 모든 엔티티 이름을 통일 해야함
+
 
 
 

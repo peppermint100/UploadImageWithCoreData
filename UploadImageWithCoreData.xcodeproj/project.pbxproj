@@ -12,20 +12,21 @@
 		BAB537DA299E3F25002C2591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB537D9299E3F25002C2591 /* Assets.xcassets */; };
 		BAB537DD299E3F25002C2591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB537DC299E3F25002C2591 /* Preview Assets.xcassets */; };
 		BADBD918299E42E6003D8C86 /* ImageDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BADBD916299E42E6003D8C86 /* ImageDataModel.xcdatamodeld */; };
-		BADBD91A299E4377003D8C86 /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD919299E4377003D8C86 /* MyImage.swift */; };
+		BADBD91A299E4377003D8C86 /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD919299E4377003D8C86 /* ImageDataModel.swift */; };
 		BADBD91C299E4425003D8C86 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = BADBD91B299E4425003D8C86 /* readme.md */; };
 		BADBD91E299E4879003D8C86 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD91D299E4879003D8C86 /* CoreDataManager.swift */; };
 		BADBD920299E4C32003D8C86 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA3CB53C29A0B354007C5E1A /* ImageDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ImageDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BAB537D2299E3F24002C2591 /* UploadImageWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadImageWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB537D5299E3F24002C2591 /* UploadImageWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageWithCoreDataApp.swift; sourceTree = "<group>"; };
 		BAB537D7299E3F24002C2591 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BAB537D9299E3F25002C2591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB537DC299E3F25002C2591 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BADBD917299E42E6003D8C86 /* ImageDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageDataModel.xcdatamodel; sourceTree = "<group>"; };
-		BADBD919299E4377003D8C86 /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
+		BADBD919299E4377003D8C86 /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		BADBD91B299E4425003D8C86 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		BADBD91D299E4879003D8C86 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
@@ -91,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BADBD916299E42E6003D8C86 /* ImageDataModel.xcdatamodeld */,
-				BADBD919299E4377003D8C86 /* MyImage.swift */,
+				BADBD919299E4377003D8C86 /* ImageDataModel.swift */,
 				BADBD91D299E4879003D8C86 /* CoreDataManager.swift */,
 				BADBD91F299E4C32003D8C86 /* UIImageTransformer.swift */,
 			);
@@ -170,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADBD918299E42E6003D8C86 /* ImageDataModel.xcdatamodeld in Sources */,
-				BADBD91A299E4377003D8C86 /* MyImage.swift in Sources */,
+				BADBD91A299E4377003D8C86 /* ImageDataModel.swift in Sources */,
 				BAB537D8299E3F24002C2591 /* ContentView.swift in Sources */,
 				BADBD91E299E4879003D8C86 /* CoreDataManager.swift in Sources */,
 				BAB537D6299E3F24002C2591 /* UploadImageWithCoreDataApp.swift in Sources */,
@@ -380,9 +381,10 @@
 		BADBD916299E42E6003D8C86 /* ImageDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BA3CB53C29A0B354007C5E1A /* ImageDataModel 2.xcdatamodel */,
 				BADBD917299E42E6003D8C86 /* ImageDataModel.xcdatamodel */,
 			);
-			currentVersion = BADBD917299E42E6003D8C86 /* ImageDataModel.xcdatamodel */;
+			currentVersion = BA3CB53C29A0B354007C5E1A /* ImageDataModel 2.xcdatamodel */;
 			path = ImageDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

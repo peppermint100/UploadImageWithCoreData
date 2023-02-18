@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct UploadImageWithCoreDataApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, CoreDataManager.shared.persistentContainer.viewContext)
         }
     }
 }
