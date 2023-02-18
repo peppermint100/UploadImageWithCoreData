@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA3CB53F29A0D76B007C5E1A /* ImageGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CB53E29A0D76B007C5E1A /* ImageGridViewModel.swift */; };
 		BAB537D6299E3F24002C2591 /* UploadImageWithCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB537D5299E3F24002C2591 /* UploadImageWithCoreDataApp.swift */; };
 		BAB537D8299E3F24002C2591 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB537D7299E3F24002C2591 /* ContentView.swift */; };
 		BAB537DA299E3F25002C2591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB537D9299E3F25002C2591 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		BA3CB53C29A0B354007C5E1A /* ImageDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ImageDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		BA3CB53E29A0D76B007C5E1A /* ImageGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewModel.swift; sourceTree = "<group>"; };
+		BA81895F29A0DCF10097D30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BAB537D2299E3F24002C2591 /* UploadImageWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadImageWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB537D5299E3F24002C2591 /* UploadImageWithCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageWithCoreDataApp.swift; sourceTree = "<group>"; };
 		BAB537D7299E3F24002C2591 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3CB53D29A0D749007C5E1A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BA3CB53E29A0D76B007C5E1A /* ImageGridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BAB537C9299E3F24002C2591 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +73,8 @@
 		BAB537D4299E3F24002C2591 /* UploadImageWithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BA81895F29A0DCF10097D30D /* Info.plist */,
+				BA3CB53D29A0D749007C5E1A /* ViewModels */,
 				BAB537E5299E4289002C2591 /* CoreData */,
 				BAB537E3299E426E002C2591 /* Views */,
 				BAB537D5299E3F24002C2591 /* UploadImageWithCoreDataApp.swift */,
@@ -176,6 +189,7 @@
 				BADBD91E299E4879003D8C86 /* CoreDataManager.swift in Sources */,
 				BAB537D6299E3F24002C2591 /* UploadImageWithCoreDataApp.swift in Sources */,
 				BADBD920299E4C32003D8C86 /* UIImageTransformer.swift in Sources */,
+				BA3CB53F29A0D76B007C5E1A /* ImageGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -286,6 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -307,7 +323,9 @@
 				DEVELOPMENT_TEAM = ARSZYU7AJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = UploadImageWithCoreData/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진? \"보여줘\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -336,7 +354,9 @@
 				DEVELOPMENT_TEAM = ARSZYU7AJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = UploadImageWithCoreData/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진? \"보여줘\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -15,15 +15,13 @@ struct ContentView: View {
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: UIImage? = nil
     
-    @FetchRequest(
-        sortDescriptors:
-            [SortDescriptor(\.createdAt, order: .reverse)]) var images: FetchedResults<ImageDataModel>
+    @ObservedObject private var imageGridViewModel = ImageGridViewModel()
     
     var body: some View {
         VStack {
             ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 20) {
-                     ForEach(images) { image in
+                LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
+                    ForEach(imageGridViewModel.images) { image in
                          Image(uiImage: image.image!)
                              .resizable()
                              .frame(width: 150, height: 150)
@@ -40,7 +38,7 @@ struct ContentView: View {
                 .onChange(of: selectedItem) { newItem in
                     Task {
                         if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                            CoreDataManager.shared.addImage(image: UIImage(data: data)!)
+                            imageGridViewModel.addImage(image: UIImage(data: data)!)
                         }
                     }
                 }
