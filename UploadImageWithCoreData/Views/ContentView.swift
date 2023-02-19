@@ -5,16 +5,20 @@ import CoreData
 
 struct ContentView: View {
     
+    @State private var images = [ImageDataModel]()
+    
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: UIImage? = nil
     
     @State private var showImageDetail = false
     
     @ObservedObject private var imageGridViewModel = ImageGridViewModel()
+    @ObservedObject private var photoLibraryPreviewViewModel = PhotoLibraryPreviewViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
+                // Listing Images in CoreData
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                         ForEach(imageGridViewModel.images) { image in
@@ -33,17 +37,21 @@ struct ContentView: View {
                         }
                     }
                 }
-                
-                ScrollView {
+                // Listing Images in User Photo Library
+                ScrollView(.horizontal) {
                     HStack {
-                        Image("batman")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
+                        ForEach(photoLibraryPreviewViewModel.images, id: \.self) { image in
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        }
                     }
                 }
-                .frame(height: 200)
-                
+                // Load Preview images from User Photo Library
+                .task {
+                }
+                // Select a Photo Button to open Photo Picker
                 PhotosPicker(
                     selection: $selectedItem,
                     matching: .images,
@@ -66,6 +74,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        // Show Both Dark and Light mode in canvas preview
+        ForEach(ColorScheme.allCases, id: \.self) {
+            ContentView().preferredColorScheme($0)
+        }
     }
 }

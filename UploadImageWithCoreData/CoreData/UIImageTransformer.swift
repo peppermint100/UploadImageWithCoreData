@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class UIImageTransformer: ValueTransformer {
     
     override func transformedValue(_ value: Any?) -> Any? {
