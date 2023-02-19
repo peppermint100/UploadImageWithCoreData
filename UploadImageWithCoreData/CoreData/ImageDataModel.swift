@@ -11,8 +11,8 @@ class ImageDataModel: NSManagedObject {
     }
 
     @NSManaged public var id: UUID
-    @NSManaged public var image: UIImage?
-    @NSManaged public var createdAt: Date?
+    @NSManaged public var image: UIImage
+    @NSManaged public var createdAt: Date
 }
 
 extension ImageDataModel : Identifiable {

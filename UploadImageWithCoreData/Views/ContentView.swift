@@ -10,7 +10,7 @@ struct ContentView: View {
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: UIImage? = nil
     
-    @State private var showImageDetail = false
+    @State private var currentDetailImage: ImageDataModel? = nil
     
     @ObservedObject private var imageGridViewModel = ImageGridViewModel()
     @ObservedObject private var photoLibraryPreviewViewModel = PhotoLibraryPreviewViewModel()
@@ -22,17 +22,13 @@ struct ContentView: View {
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                         ForEach(imageGridViewModel.images) { image in
-                            Image(uiImage: image.image!)
-                            .resizable()
-                            .frame(width: 150, height: 150)
-                            .sheet(isPresented: $showImageDetail) {
-                                ImageDetailView(image: image.image) {
-                                    showImageDetail.toggle()
+                            NavigationLink(
+                                destination: ImageDetailView(image: image, onDelete: {
                                     imageGridViewModel.deleteImage(image: image)
-                                }
-                            }
-                            .onTapGesture {
-                                showImageDetail.toggle()
+                                })){
+                                Image(uiImage: image.image)
+                                .resizable()
+                                .frame(width: 150, height: 150)
                             }
                         }
                     }
@@ -48,15 +44,12 @@ struct ContentView: View {
                         }
                     }
                 }
-                // Load Preview images from User Photo Library
-                .task {
-                }
                 // Select a Photo Button to open Photo Picker
                 PhotosPicker(
                     selection: $selectedItem,
                     matching: .images,
                     photoLibrary: .shared()) {
-                        Text("Select a photo")
+                        Text("Select from your library?")
                     }
                     .onChange(of: selectedItem) { newItem in
                         Task {

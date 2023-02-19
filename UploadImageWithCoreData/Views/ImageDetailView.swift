@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct ImageDetailView: View {
-    var image: UIImage? = nil
-    var onPressDeleteButton: () -> Void
+    var image: ImageDataModel
+    var onDelete: () -> Void
+    let container = CoreDataManager.shared.persistentContainer
     
     var body: some View {
-        if image != nil {
-            Image(uiImage: image!)
-               .resizable()
-               .scaledToFit()
-            
-            Button("Delete") {
-                onPressDeleteButton()
-            }
+        Image(uiImage: image.image)
+            .resizable()
+            .scaledToFit()
+        
+        Button("Delete") {
+            onDelete()
         }
     }
 }
