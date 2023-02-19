@@ -4,13 +4,10 @@ import UIKit
 import CoreData
 
 struct ContentView: View {
-    
-    @State private var images = [ImageDataModel]()
-    
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: UIImage? = nil
     
-    @State private var currentDetailImage: ImageDataModel? = nil
+    @State private var imageToOpenInSheet: UIImage? = nil
     
     @ObservedObject private var imageGridViewModel = ImageGridViewModel()
     @ObservedObject private var photoLibraryPreviewViewModel = PhotoLibraryPreviewViewModel()
@@ -41,6 +38,18 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 100, height: 100)
                                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                .onTapGesture {
+                                    imageToOpenInSheet = image
+                                }
+                            }
+                        }
+                    .sheet(item: $imageToOpenInSheet){ item in
+                        Image(uiImage: item)
+                            .resizable()
+                            .scaledToFit()
+                        Button("Upload") {
+                            imageGridViewModel.addImage(image: item)
+                            imageToOpenInSheet = nil // sheet의 item 값이 nil이 되면 sheet가 자동으로 닫힘
                         }
                     }
                 }
@@ -63,6 +72,9 @@ struct ContentView: View {
             .padding()
         }
     }
+}
+
+extension UIImage: Identifiable {
 }
 
 struct ContentView_Previews: PreviewProvider {

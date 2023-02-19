@@ -32,6 +32,15 @@ extension PHAsset {
     let manager = PHImageManager.default()
     let option = PHImageRequestOptions()
     var thumbnail = UIImage()
+      
+      /*
+       deliveryMode를 .highQuality로 하고 싶다면 isSynchronous옵션을 켜주어야 한다.
+       기본적으로 PHImageRequest는 고품질 이미지를 불러오는 동안 저품질 이미지를 보여주는데,
+       이는 비동기적으로 작동하기 때문에 동기적으로 사용하겠다고 명시해야 한다.
+       */
+    option.isSynchronous = true
+    option.deliveryMode = .highQualityFormat
+      
     manager.requestImage(for: self,
                             targetSize: CGSize(width: self.pixelWidth, height: self.pixelHeight),
                             contentMode: .aspectFit,
